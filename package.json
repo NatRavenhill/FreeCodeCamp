@@ -1,0 +1,25 @@
+{
+  "name": "free-code-camp",
+  "version": "1.0.0",
+  "description": "",
+  "main": "server.js",
+  "scripts": {
+    "start": "babel-node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NatRavenhill/FreeCodeCamp.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/NatRavenhill/FreeCodeCamp/issues"
+  },
+  "homepage": "https://github.com/NatRavenhill/FreeCodeCamp#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "express": "^4.16.2",
+    "open": "0.0.5"
+  }
+}
