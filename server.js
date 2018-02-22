@@ -11,7 +11,8 @@ app.get('/', function(req, res){
 
 app.use('/TributePage', express.static(path.join(__dirname+ '/TributePage')));
 app.use('/RandomQuoteGenerator', express.static(path.join(__dirname+ '/RandomQuoteGenerator')));
-  
+app.use('/LocalWeather', express.static(path.join(__dirname+ '/LocalWeather')));
+
 app.listen(port, function(err){
     if(err){
       console.log(err);
