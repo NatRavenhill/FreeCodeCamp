@@ -1,31 +1,22 @@
-body {
-    background: pink;
-  }
-  
-  .wrapper {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    grid-template-rows: 1fr 2fr 1fr;
-    color: #444;
-  }
-  
-  .well {
-    padding: 50px;
-    text-align: center;
-  }
-  
-  h1 {
-    text-align:center;
-  }
-  
-  .centered-button {
-    display:block;
-    margin-left:auto;
-    margin-right:auto;
-    padding: 0px 5px;
-  }
-  
-  .main-box {
-    padding: 50px;
-    background: white;
-  }
+body, .jumbotron {
+  background:pink;
+}
+
+.container {
+  background:white;
+  margin:auto;
+  padding: 50px;
+}
+
+.well {
+  background:whitesmoke;
+}
+
+h1 {
+  text-align:center;
+}
+
+.btn:focus,
+.btn:active {
+  box-shadow: none;
+}
