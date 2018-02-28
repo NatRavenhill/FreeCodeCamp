@@ -1,15 +1,18 @@
 var dest="https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?"
 $(document).ready(function() {
   
-  $("#newQuote").on("click", function(){
-    var htmlString = "test";      
+  $("#newQuote").on("click", function(){     
+    //get quote text 
     $.getJSON(dest, function(json){
       $(".quote").text(json.quoteText);
       $(".quoteAuthor").text(json.quoteAuthor);
+
+      //show tweet button
+      $("#tweetButton").css("visibility", "visible");
     });
 
+    //set page colour
     var color = changeColour();
-    console.log(color);
     $(".jumbotron").css("background-color", color);
     $("body").css("background-color", color);
   });

@@ -5,7 +5,9 @@ body, .jumbotron {
 .container {
   background:white;
   margin:auto;
+  height:250px;
   padding: 50px;
+  overflow:auto;
 }
 
 .well {
@@ -19,4 +21,8 @@ h1 {
 .btn:focus,
 .btn:active {
   box-shadow: none;
+}
+
+#tweetButton {
+  visibility:hidden;
 }
