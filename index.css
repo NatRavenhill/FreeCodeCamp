@@ -1,4 +1,34 @@
-h1  {
-    background-color: green;
-    color: white;
+body {
+    position: relative; 
 }
+
+a {
+    color:  #006400;
+}
+
+.container {
+    padding: 70px 0px;
+}
+
+.navbar  {
+    background-color: #006400;
+}
+
+.content {
+    text-align:center;
+}
+
+.projimg {
+    border-radius: 8px;
+}
+
+li {
+    list-style-type: none;
+    display: inline;
+}
+
+hr {
+    border: 0;
+    border-top: 3px double #8c8c8c;
+}
+
