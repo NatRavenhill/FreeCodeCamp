@@ -1,4 +1,6 @@
 var isC = true;
+var cDegrees = "&#8451;";
+var fDegrees = "&#8457;";
 
 $(document).ready(function(){
 
@@ -20,7 +22,7 @@ $(document).ready(function(){
             });
         
             $('#weather').html(weather);
-            $('#temperature').html(json.main.temp + "&#8451;");
+            $('#temperature').html(json.main.temp + cDegrees);
 
             var location = json.name + ", " + json.sys.country;
             $("#locationText").text(location);
@@ -30,16 +32,28 @@ $(document).ready(function(){
       $("#toggleTemp").click(function(){
         console.log("isC", isC);
         if(isC){
-            $("#toggleTemp").html("To &#8451;");
+            $("#toggleTemp").html("To " + cDegrees);
+            centToFaren($('#temperature').html());
             isC = false;
         }
         else{
-            $("#toggleTemp").html("To &#8457;");
+            $("#toggleTemp").html("To " + fDegrees);
+            fahrenToCent($('#temperature').html());
             isC = true;
         }
-         });
+        });
     }
-
-
 });
+
+centToFaren = function(temp){
+    temp = $('#temperature').html().match(/\d+.\d+/)[0];
+    var fahren = (temp * (9/5) + 32).toFixed(2);
+    $('#temperature').html(fahren + "&#8457;");
+};
+
+fahrenToCent = function(temp){
+    temp = $('#temperature').html().match(/\d+.\d+/)[0];
+    var fahren = ((temp - 32) * (5/9)).toFixed(2);
+    $('#temperature').html(fahren + "&#8451;");
+};
 
