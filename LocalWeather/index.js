@@ -1,9 +1,11 @@
+var isC = true;
+
 $(document).ready(function(){
 
     if(navigator.geolocation) {
         navigator.geolocation.getCurrentPosition(function(position){
-        var lat = Math.round(position.coords.latitude);
-        var long = Math.round(position.coords.longitude);
+        var lat = position.coords.latitude;
+        var long = position.coords.longitude;
 
         var dest = 'https://fcc-weather-api.glitch.me/api/current?lat='
         + lat +'&lon=' + long;
@@ -18,9 +20,26 @@ $(document).ready(function(){
             });
         
             $('#weather').html(weather);
+            $('#temperature').html(json.main.temp + "&#8451;");
 
-            $("#locationText").text(json.sys.country);
+            var location = json.name + ", " + json.sys.country;
+            $("#locationText").text(location);
         });
       });
+
+      $("#toggleTemp").click(function(){
+        console.log("isC", isC);
+        if(isC){
+            $("#toggleTemp").html("To &#8451;");
+            isC = false;
+        }
+        else{
+            $("#toggleTemp").html("To &#8457;");
+            isC = true;
+        }
+         });
     }
+
+
 });
+
