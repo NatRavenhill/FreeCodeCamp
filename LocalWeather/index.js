@@ -13,7 +13,6 @@ $(document).ready(function(){
         + lat +'&lon=' + long;
         
         $.getJSON(dest, function(json){
-            console.log(json);
             var weather = "";
             var weatherArr = json.weather;
             weatherArr.forEach(element => {
@@ -30,7 +29,6 @@ $(document).ready(function(){
       });
 
       $("#toggleTemp").click(function(){
-        console.log("isC", isC);
         if(isC){
             $("#toggleTemp").html("To " + cDegrees);
             centToFaren($('#temperature').html());
