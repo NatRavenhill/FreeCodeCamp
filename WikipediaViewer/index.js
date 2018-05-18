@@ -19,6 +19,7 @@ $(document).ready(function(){
                 var titles = data[1];
                 var summaries = data[2];
                 var links = data[3];
+                $("#results").empty();
                 for(var i = 1; i < titles.length; i++){
                     createListItem(titles[i], summaries[i], links[i]);
                 }
