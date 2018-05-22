@@ -1,0 +1,21 @@
+body {
+    background: purple;
+    color: white;
+}
+.card {
+    width:15rem;
+    color:black;
+}
+
+h1 {
+    text-align: center;
+    padding: 1em 0;
+}
+
+.bg-success {
+    color:white;
+}
+
+.bg-success a {
+    color:white;
+}
