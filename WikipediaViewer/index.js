@@ -6,28 +6,8 @@ $(document).ready(function(){
     });
 
     $("#search").click(function(){
-        var searchTerm = $("input[id=searchTerm]").val();
-
-        var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=" + searchTerm;
-        $.ajax(link, {
-            dataType: "json",
-            data: {
-              origin: "*"
-            },
-            type: "GET",
-            success: function(data) {
-                var titles = data[1];
-                var summaries = data[2];
-                var links = data[3];
-                $("#results").empty();
-                for(var i = 1; i < titles.length; i++){
-                    createListItem(titles[i], summaries[i], links[i]);
-                }
-
-            }
+        search();
         });
-
-    });
 });
 
 createListItem = function(title, summary, link){   
@@ -35,4 +15,35 @@ createListItem = function(title, summary, link){
     link + '">' + title + '</a></h4><p>' + summary + '</p></div></div></li>'; 
     $("#results").append(item);
 }
+
+search = function(){
+    var searchTerm = $("input[id=searchTerm]").val();
+
+    var link = "https://en.wikipedia.org/w/api.php?action=opensearch&format=json&origin=*&search=" + searchTerm;
+    $.ajax(link, {
+        dataType: "json",
+        data: {
+          origin: "*"
+        },
+        type: "GET",
+        success: function(data) {
+            var titles = data[1];
+            var summaries = data[2];
+            var links = data[3];
+            $("#results").empty();
+            for(var i = 1; i < titles.length; i++){
+                createListItem(titles[i], summaries[i], links[i]);
+            }
+
+        }
+    });
+};
+
+$(document).keypress(
+    function(event){
+     if (event.which == '13') {
+        event.preventDefault();
+        search();
+      }
+});
 
