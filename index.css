@@ -7,7 +7,7 @@ a {
 }
 
 .container {
-    padding: 70px 0px;
+    padding: 100px 0px;
 }
 
 .navbar  {
@@ -30,5 +30,9 @@ li {
 hr {
     border: 0;
     border-top: 3px double #8c8c8c;
+}
+
+#welcome-section {
+    height:100vh;
 }
 
