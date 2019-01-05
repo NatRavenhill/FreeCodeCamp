@@ -1,7 +1,7 @@
 var dest="https://api.forismatic.com/api/1.0/?method=getQuote&format=jsonp&lang=en&jsonp=?"
 $(document).ready(function() {
   
-  $("#newQuote").on("click", function(){     
+  $("#new-quote").on("click", function(){     
     //get quote text 
     $.getJSON(dest, function(json){
       $(".quote").text(json.quoteText);
