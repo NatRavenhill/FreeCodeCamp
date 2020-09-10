@@ -1,5 +1,2 @@
-# Don't add installed dependencies
-node_modules/
-
 # Don't add vscode settings files
 .vscode/* 
