@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <!-- Required meta tags -->
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+    crossorigin="anonymous">
+ <link rel="stylesheet" href="./index.css">
+  <title>Survey Form</title>
+
+</head>
+
+<body>
+  <!-- Optional JavaScript -->
+  <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q"
+    crossorigin="anonymous"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl"
+    crossorigin="anonymous"></script>
+
+  <main class="container">
+    <h1 class="text-center" id="title">Survey Form</h1>
+    <form id="survey-form">
+      
+    <p id="description">This is a description.</p>
+      <label for="name" id="name-label">Name:</label>
+      <input id="name" placeholder="Name" type="text" required />
+      <br>
+      <label for="email" id="email-label">Email:</label>
+      <input id="email" placeholder="Email" type="email" required />
+      <br>
+      <label for- "number" id="number-label">Number:</label>
+      <input id="number" placeholder="Number" type="number" min="0" max="100" />
+      <br> Favourite colour:
+      <select id="dropdown">
+        <option value="Red">Red</option>
+          <option value="Yellow">Yellow</option>
+            <option value="Pink">Pink</option>
+              <option value="Green">Green</option>
+                <option value="Orange">Orange</option>
+                  <option value="Purple">Purple</option>
+                    <option value="Blue">Blue</option>
+      </select>
+
+      <br>
+      <br>
+      
+      <p>Cats or dogs?</p>
+      <p>
+        <input type="radio" name="radio-buttons" value="cats" /> Cats
+        <br>
+        <input type="radio" name="radio-buttons" value="dogs" /> Dogs
+      </p>
+
+    
+      <p>Foods you like:</p>
+      <p>
+        <input type="checkbox" name="radio-buttons" value="pasta" /> Pasta
+        <br>
+        <input type="checkbox" name="radio-buttons" value="pizza" /> Pizza<br>
+      </p>
+
+      <label for="comments">Any extra comments?</label><br>
+      <textarea id="comments"></textarea><br>
+      <button id="submit">Submit</button>
+    </form>
+  </main>
+</body>
+
+</html>

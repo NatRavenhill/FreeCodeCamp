@@ -1,0 +1,24 @@
+body 
+{
+    background-color: brown;
+}
+
+main
+{
+    margin-top: 10ex;
+    margin-bottom: 10ex;
+    background-color: white;
+}
+
+form
+{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+}
+
+#submit {
+    align-self: center;
+    margin: 5px;
+}
