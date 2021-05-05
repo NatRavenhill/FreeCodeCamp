@@ -1,0 +1,53 @@
+:root {
+  --color1: #2a2b2a;
+  --color2: #706c61;
+  --color3: #f7f7ff;
+  --color4: #c51b56;
+}
+
+h1 {
+  color: var(--color3);
+  font-family: "Courier New", Courier, monospace;
+  padding: 10px;
+}
+
+h2 {
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: grid;
+  justify-content: stretch;
+  font-family: "Open Sans", Arial, sans-serif;
+  background-color: var(--color4);
+}
+
+nav {
+  grid-column: 1;
+  position: fixed;
+  height: 100%;
+}
+
+nav li {
+  list-style-type: none;
+  padding: 70px 0px;
+  border-top: 1px solid var(--color1);
+  border-bottom: 1px solid var(--color1);
+}
+
+nav a {
+  color: var(--color3);
+}
+
+main {
+  background-color: var(--color3);
+  grid-column: 2;
+  margin-left: 300px;
+  padding: 20px;
+  border-left: 5px solid var(--color1);
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+}

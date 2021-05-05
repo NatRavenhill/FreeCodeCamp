@@ -1,12 +1,28 @@
-<html>
+<!doctype html>
+<html lang="en">
   <head>
-      <title>What is JavaScript?</title>
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="./techDoc.css">
+    <title>What is JavaScript?</title>
   </head>
   <body>
     <script src="https://cdn.freecodecamp.org/testable-projects-fcc/v1/bundle.js"></script>
+    <nav id="navbar">
+      <header><h1>What is JavaScript?</h1></header> 
+      <ul>
+        <li><a class="nav-link" href="#A_HIGH-LEVEL_DEFINITION">A high-level definition</a></li>
+        <li><a class="nav-link" href="#WHAT_CAN_IT_DO?">What can it do?</a></li>
+        <li><a class="nav-link" href="#WHAT_IS_IT_DOING_ON_YOUR_PAGE?">What is it doing on your page?</a></li>
+        <li><a class="nav-link" href="#HOW_DO_YOU_ADD_IT_TO_YOUR_PAGE?">How do you add it to your page?</a></li>
+        <li><a class="nav-link" href="#COMMENTS">Comments</a></li>
+      </ul>
+      
+    </nav>
     <main id="main-doc">
       <section class="main-section" id="A_HIGH-LEVEL_DEFINITION">
-        <header>A high-level definition</header>
+        <header><h2>A high-level definition</h2></header>
         <p>
           JavaScript is a scripting or programming language that allows you to
           implement complex features on web pages — every time a web page does
@@ -45,7 +61,8 @@
 
         <p>Then we can add some CSS into the mix to get it looking nice:</p>
 
-        <code>p {
+        <code>
+        p {
             font-family: 'helvetica neue', helvetica, sans-serif;
             letter-spacing: 1px;
             text-transform: uppercase;
@@ -58,21 +75,24 @@
             padding: 3px 10px;
             display: inline-block;
             cursor: pointer;
-          }</code>
+        }
+      </code>
 
-          <p>And finally, we can add some JavaScript to implement dynamic behavior:</p>
+        <p>And finally, we can add some JavaScript to implement dynamic behavior:</p>
 
-          <code>const para = document.querySelector('p');
+        <code>
+          const para = document.querySelector('p');
 
-            para.addEventListener('click', updateName);
+          para.addEventListener('click', updateName);
             
-            function updateName() {
-              let name = prompt('Enter a new name');
-              para.textContent = 'Player 1: ' + name;
-            }</code>
+          function updateName() {
+            let name = prompt('Enter a new name');
+            para.textContent = 'Player 1: ' + name;
+          }
+        </code>
       </section>
       <section class="main-section" id="WHAT_CAN_IT_DO?">
-        <header>What can it do?</header>
+        <header><h2>What can it do?</h2></header>
         </p>The core client-side JavaScript language consists of some common programming features that allow you to do things like:</p>
 
         <ul>
@@ -85,23 +105,22 @@
         <p>There's a lot more available, too! However, don't get over excited just yet. You won't be able to build the next Facebook, Google Maps, or Instagram after studying JavaScript for 24 hours — there are a lot of basics to cover first. And that's why you're here — let's move on!</p>
       </section>
       <section class="main-section" id="WHAT_IS_IT_DOING_ON_YOUR_PAGE?">
-        <header>What is it doing on your page?</header>
+        <header><h2>What is it doing on your page?</h2></header>
 
         <p>A very common use of JavaScript is to dynamically modify HTML and CSS to update a user interface, via the Document Object Model API (as mentioned above). Note that the code in your web documents is generally loaded and executed in the order it appears on the page. If the JavaScript loads and tries to run before the HTML and CSS it is affecting has been loaded, errors can occur.</p>
 
         <p>When the browser encounters a block of JavaScript, it generally runs it in order, from top to bottom. This means that you need to be careful what order you put things in. </p>
       </section>
       <section class="main-section" id="HOW_DO_YOU_ADD_IT_TO_YOUR_PAGE?">
-        <header>How do you add it to your page?</header>
+        <header><h2>How do you add it to your page?</h2></header>
 
         <p>JavaScript is applied to your HTML page in a similar manner to CSS. Whereas CSS uses link elements to apply external stylesheets and style elements to apply internal stylesheets to HTML, JavaScript only needs one friend in the world of HTML — the script element. Let's learn how this works.</p>
 
         <p>
-            First of all, make a local copy of our example file apply-javascript.html. Save it in a directory somewhere sensible. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button. Next, go to your text editor and add the following in your head — just before your closing head tag:
+            First of all, make a local copy of our example file apply-javascript.html. Save it in a directory somewhere sensible. Open the file in your web browser and in your text editor. You'll see that the HTML creates a simple web page containing a clickable button. Next, go to your text editor and add the following in your head between script tags — just before your closing head tag:
         </p>
 
-        <code>
-            <script>
+        <pre>
             document.addEventListener("DOMContentLoaded", function() {
                 function createParagraph() {
                   let para = document.createElement('p');
@@ -114,14 +133,13 @@
                 for(let i = 0; i < buttons.length ; i++) {
                   buttons[i].addEventListener('click', createParagraph);
                 }
-              });
-              </script>
-        </code>
+            });
+        </pre>
 
         <p>Save your file and refresh the browser — now you should see that when you click the button, a new paragraph is generated and placed below.</p>
       </section>
       <section class="main-section" id="COMMENTS">
-        <header>Comments</header>
+        <header><h2>Comments</h2></header>
         <p>As with HTML and CSS, it is possible to write comments into your JavaScript code that will be ignored by the browser, and exist to provide instructions to your fellow developers on how the code works (and you, if you come back to your code after six months and can't remember what you did). Comments are very useful, and you should use them often, particularly for larger applications. There are two types:</p>
 
         <ul>
@@ -135,9 +153,9 @@
                 <p>A multi-line comment is written between the strings /* and */, e.g.</p>
                 <code>
                     /*
-            I am also
-            a comment
-          */
+                      I am also
+                      a comment
+                    */
                 </code>
             </li>
         </ul>
@@ -147,24 +165,24 @@
         <code>
             // Function: creates a new paragraph and appends it to the bottom of the HTML body.
 
-function createParagraph() {
-  let para = document.createElement('p');
-  para.textContent = 'You clicked the button!';
-  document.body.appendChild(para);
-}
+            function createParagraph() {
+              let para = document.createElement('p');
+              para.textContent = 'You clicked the button!';
+              document.body.appendChild(para);
+            }
 
-/*
-  1. Get references to all the buttons on the page in an array format.
-  2. Loop through all the buttons and add a click event listener to each one.
+            /*
+              1. Get references to all the buttons on the page in an array format.
+              2. Loop through all the buttons and add a click event listener to each one.
 
-  When any button is pressed, the createParagraph() function will be run.
-*/
+              When any button is pressed, the createParagraph() function will be run.
+            */
 
-const buttons = document.querySelectorAll('button');
+            const buttons = document.querySelectorAll('button');
 
-for (let i = 0; i < buttons.length ; i++) {
-  buttons[i].addEventListener('click', createParagraph);
-}
+            for (let i = 0; i < buttons.length ; i++) {
+              buttons[i].addEventListener('click', createParagraph);
+            }
         </code>
       </section>
 
