@@ -9,7 +9,7 @@ $(document).ready(function(){
         var lat = position.coords.latitude;
         var long = position.coords.longitude;
 
-        var dest = 'https://fcc-weather-api.glitch.me/api/current?lat='
+        var dest = 'https://weather-proxy.freecodecamp.rocks/api/current?lat='
         + lat +'&lon=' + long;
         
         $.getJSON(dest, function(json){
