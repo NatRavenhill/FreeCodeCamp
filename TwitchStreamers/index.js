@@ -1,8 +1,10 @@
+const twitchURL = "https://twitch-proxy.freecodecamp.rocks/twitch-api/";
+
 $("document").ready(function(){
     var users = ["ESL_SC2", "OgamingSC2", "cretetion", "freecodecamp", "storbeck", "habathcx", "RobotCaleb", "noobs2ninjas"];
 
     users.forEach(function(user){
-        var link = "https://wind-bow.glitch.me/twitch-api/channels/" + user;
+        var link = twitchURL + "channels/" + user;
         $.getJSON(link, function(channelsJson){
             createListItem(channelsJson, user);
         });
@@ -14,7 +16,7 @@ $("document").ready(function(){
 createListItem = function(channelsJson, user){
     
 
-    var streamsLink = "https://wind-bow.glitch.me/twitch-api/streams/" + user;
+    var streamsLink = twitchURL + "streams/" + user;
     $.getJSON(streamsLink, function(streamsJson){
 
         var item = "<div class=\"card ";
